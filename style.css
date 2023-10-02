@@ -1,0 +1,128 @@
+.calendar{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+#monthYear {
+    text-transform: uppercase;
+}
+
+table{
+    top: 150%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid #afd7d8;
+    text-align: center;
+    padding: 5%;
+    background-color:#e6f7ff;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 50px;
+}
+
+.day-cell {
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+.day-cell:hover{
+    background-color: #afd7d8;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    padding: 5px 50px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.save-button{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.cancel-button{
+    padding: 10px 17px;
+    background-color:#FF0000;
+    color: white;
+    border: none;
+    border-radius: 6%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.save-button:hover{
+    background-color: #0056b3;
+}
+
+.cancel-button:hover{
+    background-color:#9a4f4e ;
+}
+
+
+#prevMonth{
+    margin-left: 400px;
+}
+
+/* Estilos para pantallas pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .calendar {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #prevMonth {
+        margin-left: 10px;
+    }
+
+   
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 3%;
+        min-height: 30px;
+    }
+  
+   form {
+    padding: 10px; 
+}
+
+input[type="text"] {
+    padding: 5px 10px; 
+}
+    .save-button,
+    .cancel-button {
+        padding: 5px 10px;
+        border-radius: 6px;
+        margin: 5px 0;
+    }
+
+    .task-container {
+        max-height: 100px;
+        overflow-y: auto; 
+    }
+    
+    .task {
+        margin-bottom: 5px;
+    }
+}
